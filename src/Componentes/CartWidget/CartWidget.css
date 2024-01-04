@@ -1,0 +1,10 @@
+.imgBolsita {
+  width: 45px;
+  height: 45px;
+}
+.contador {
+  display: inline-block;
+  position: absolute;
+  top: 8%;
+  right: 10%;
+}
