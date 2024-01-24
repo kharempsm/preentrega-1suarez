@@ -2,7 +2,7 @@ import "./CartWidget.css";
 
 const CardWidget = () => {
   return (
-    <div>
+    <div className="contenedor__bolsita">
       <img
         className="imgBolsita"
         src="./img/bolsita.png"
