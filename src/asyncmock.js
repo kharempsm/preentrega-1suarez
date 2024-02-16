@@ -43,7 +43,7 @@ const productos = [
     id: "6",
     nombre: "Poleron de rayas azules",
     precio: 25000,
-    img: "../img/poleron-3.jpg",
+    img: "../img/poleron-2.jpg",
     categoria: "2",
     stock: 50,
   },
@@ -77,7 +77,7 @@ export const getProductos = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(productos);
-    }, 2000);
+    }, 20);
   });
 };
 
@@ -86,7 +86,7 @@ export const getUnProducto = (id) => {
     setTimeout(() => {
       const producto = productos.find((prod) => prod.id === id);
       resolve(producto);
-    }, 2000);
+    }, 20);
   });
 };
 
@@ -97,6 +97,6 @@ export const getProductosPorCategoria = (categoria) => {
         (prod) => prod.categoria === categoria
       );
       resolve(productosCategoria);
-    }, 100);
+    }, 10);
   });
 };

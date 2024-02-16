@@ -1,8 +1,20 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import ItemCount from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
 import "./ItemDetail.css";
+import { CarritoContext } from "../../context/CarritoContext";
+
 const ItemDetail = ({ id, nombre, stock, precio, img }) => {
   const [agregarCantidad, setAgregarCantidad] = useState(0);
+
+  const { agregarAlCarrito } = useContext(CarritoContext);
+
+  const manejadorCantidad = (cantidad) => {
+    setAgregarCantidad(cantidad);
+
+    const item = { id, nombre, precio };
+    agregarAlCarrito(item, cantidad);
+  };
 
   return (
     <div className="contenedor__item">
@@ -11,25 +23,28 @@ const ItemDetail = ({ id, nombre, stock, precio, img }) => {
         <p className="id__item">ID: {id} </p>
         <p className="stock__item">Stock: {stock} </p>
         <h3 className="precio__item">${precio} </h3>
-        <p className="description__item">
-          Descubre la elegacia y comodidad en cada una de nuestras prendas y
-          accesorios
-        </p>
-        <div className="contenedor__tallas">
-          <div className="talla__card">
-            <span className="talla">S</span>
-          </div>
-          <div className="talla__card">
-            <span className="talla">M</span>
-          </div>
-          <div className="talla__card">
-            <span className="talla">L</span>
-          </div>
-          <div className="talla__card">
-            <span className="talla">XL</span>
-          </div>
-        </div>
+
+        {}
+
+        {agregarCantidad > 0 ? (
+          <>
+            <Link className="cart__link" to="/Cart">
+              {" "}
+              Terminar compra
+            </Link>
+            <Link className="cart__link" to="/">
+              Seguir mirando
+            </Link>
+          </>
+        ) : (
+          <ItemCount
+            inicial={1}
+            stock={stock}
+            funcionAgregar={manejadorCantidad}
+          />
+        )}
       </div>
+
       <div className="contenedor__img">
         <img src={img} alt={nombre} className="img__item" />
       </div>
