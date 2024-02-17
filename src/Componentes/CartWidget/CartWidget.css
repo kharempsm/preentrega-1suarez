@@ -1,21 +1,25 @@
 .contenedor__bolsita {
   background-color: white;
-  width: 50px;
-  height: 50px;
-  position: relative;
+  width: 60px;
+  height: 60px;
   margin-left: 300px;
   margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .imgBolsita {
   width: 45px;
   height: 45px;
-  top: 50%;
-  right: 50%;
 }
-.contador {
-  display: inline-block;
+
+.numero__contador {
   position: absolute;
-  top: 25%;
-  right: -25%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-decoration: none;
+  color: black;
 }
