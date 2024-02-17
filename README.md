@@ -13,9 +13,13 @@ Proceso de compra: Completa tu compra proporcionando tus detalles.
 ## Tecnologías usadas
 
 1- React: Biblioteca de JavaScript para construir interfaces de usuario.
+
 2- CSS: Lenguaje de hojas de estilo para el diseño y la presentación de páginas web.
+
 3- Firebase: Plataforma de desarrollo de aplicaciones móviles y web.
+
 4- Sweet Alert: Biblioteca para mostrar mensajes de alerta personalizados en la interfaz de usuario.
+
 5- React Router: Librería para manejar el enrutamiento en aplicaciones React de una sola página (SPA).
 
 ### Instalación
