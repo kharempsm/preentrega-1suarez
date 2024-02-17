@@ -38,4 +38,4 @@ Este proyecto está bajo la licencia MIT.
 
 Kharem Suarez.
 
-![Imagen de kharem](./img/kharem-img.png)
+![Imagen de kharem](./public/img/img/kharem-img.png)
