@@ -37,5 +37,3 @@ Este proyecto está bajo la licencia MIT.
 ### Autor
 
 Kharem Suarez.
-
-![Imagen de kharem](./public/img/img/kharem-img.png)
